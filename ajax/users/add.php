@@ -85,8 +85,8 @@
                         $model->response->error->checkConfirm = "<span class='text-danger'><i>Confirm password tidak sama dengan password.!</i></span>";
                     } else {
                         if(!isset($model->response->error->photo)){
-                            $update = $model->insert($data);
-                            if ($update) {
+                            $insert = $model->insert($data);
+                            if ($insert) {
                                 $model->response->status = true;
                                 $model->response->message = Helper::alertSuccess("Tambah data atau register user berhasil di prosess.");
                             } else {
