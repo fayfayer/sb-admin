@@ -635,8 +635,8 @@ class Db_pdo extends Database
 		$sql .= "(".substr($fields, 2).") ";
 		$sql .= "VALUES (".substr($values, 2).")";
 
-		return $sql;
-		exit();
+		/*return $sql;
+		exit();*/
 
 		$stmt = $this->db->prepare($sql);
 		$stmt->execute();
